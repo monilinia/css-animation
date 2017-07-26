@@ -1,0 +1,267 @@
+/*подключение шрифтов*/
+@font-face {
+font-family: 'Olietta_script_BoldItalic';
+src: url('fonts/Olietta_script_BoldItalic.ttf');
+}
+@font-face {
+font-family: 'Olietta_script_Lyrica_BoldItalic';
+src: url('fonts/Olietta_script_Lyrica_BoldItalic.ttf');
+}
+@font-face {
+font-family: 'Rubius';
+src: url('fonts/Rubius.ttf');
+}
+
+/* оформление popup*/
+.popup {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 30;
+	top: 0px;
+	left: 0px;
+	background: -webkit-radial-gradient(circle,#CD853F,#FF8C00,#300, #000 );
+}
+.popup  .popup-content {
+	margin: 20px auto;
+	width: 800px;
+	text-align: center;
+    position: relative;
+	height:600px;
+}
+
+/* свойства для блока с параллакс */
+#port {
+	background: rgb(47, 49, 52);
+	margin: 1.5em 0px;
+	overflow: hidden;
+	position: relative;
+	height: 600px;
+	width: 800px;
+}
+/* папараць-кветка и ее анимация */
+#kvetka{
+	position:absolute;
+	width: 20px;
+	top:300px;
+	opacity: 0.9;
+	cursor:pointer;
+}
+.pulse{
+	-webkit-animation: pulse 1s infinite;
+	        animation: pulse 1s infinite;
+}
+@-webkit-keyframes pulse{
+	0%{-webkit-filter:brightness(1);
+	filter:brightness(1);
+	}
+	100%{
+		-webkit-filter:brightness(3);
+		        filter:brightness(3);
+	}
+}
+@keyframes pulse{
+	0%{-webkit-filter:brightness(1);
+	filter:brightness(1);
+	}
+	100%{
+		-webkit-filter:brightness(3);
+		        filter:brightness(3);
+	}
+}
+/*анимация при клике на цветке*/
+.bigFlower{
+-webkit-animation-name: growth;
+        animation-name: growth;
+	-webkit-animation-duration:3s;
+	        animation-duration:3s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;	
+}
+@-webkit-keyframes growth{
+	0%{z-index:40;
+	}
+	100%{
+		-webkit-transform: scale(10);
+		        transform: scale(10);
+		opacity:1;
+		z-index:40;
+	}
+}
+@keyframes growth{
+	0%{z-index:40;
+	}
+	100%{
+		-webkit-transform: scale(10);
+		        transform: scale(10);
+		opacity:1;
+		z-index:40;
+	}
+}
+#circle1, #circle2, #circle3, #circle4, #circle5, #circle6{
+	z-index:41;	
+	width:8px;
+	height:8px;
+	border-radius: 5px;
+	position: absolute;
+	top: 230px;
+	left: 400px;
+	opacity: 0;
+}
+.circle{
+	-webkit-animation-name: siyanie;
+	        animation-name: siyanie;
+	-webkit-animation-duration:6s;
+	        animation-duration:6s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+#circle1{
+	border: 1px dotted #FFEB3B;
+	-webkit-animation-delay:2s;
+	        animation-delay:2s;
+}
+#circle2{
+	background: #FFEB3B;
+	-webkit-animation-delay:3s;
+	        animation-delay:3s;
+}
+#circle3{
+	border: 1px dotted #FF9800;
+	-webkit-animation-delay:4s;
+	        animation-delay:4s;
+}
+#circle4{
+	background: #FF9800;
+	-webkit-animation-delay:5s;
+	        animation-delay:5s;
+}
+#circle5{
+	border: 1px dotted #FFC107;
+	-webkit-animation-delay:6s;
+	        animation-delay:6s;
+}
+#circle6{
+	background: #FFC107;
+	-webkit-animation-delay:7s;
+	        animation-delay:7s;
+}
+@-webkit-keyframes siyanie{
+	0%{
+		z-index:39;
+		opacity:0.9;
+		-webkit-transform: rotate(0deg) scale(1);
+		        transform: rotate(0deg) scale(1);
+	}
+	100%{
+		-webkit-transform: rotate(120deg) scale(50);
+		        transform: rotate(120deg) scale(50);
+		opacity:0;
+		z-index:39;
+	}
+}
+@keyframes siyanie{
+	0%{
+		z-index:39;
+		opacity:0.9;
+		-webkit-transform: rotate(0deg) scale(1);
+		        transform: rotate(0deg) scale(1);
+	}
+	100%{
+		-webkit-transform: rotate(120deg) scale(50);
+		        transform: rotate(120deg) scale(50);
+		opacity:0;
+		z-index:39;
+	}
+}
+/*оформление появляющейся надписи*/
+h2{
+	position:absolute;
+	bottom: 30px;
+	text-align:center;
+	font-family:'Olietta_script_BoldItalic';
+	font-size: 46px;
+	text-shadow: 3px 3px 4px black;
+	color: #FFC107;
+	opacity:0;
+}
+.firstText{
+	-webkit-animation-name: poyavlenie;
+	        animation-name: poyavlenie;
+	-webkit-animation-duration:4s;
+	        animation-duration:4s;
+	-webkit-animation-delay:5s;
+	        animation-delay:5s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+@-webkit-keyframes poyavlenie{
+	0%{
+		z-index:41;
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+		z-index:41;
+		-webkit-filter: drop-shadow(3px 3px 5px #4CAF50);
+		        filter: drop-shadow(3px 3px 5px #4CAF50);
+	}
+}
+@keyframes poyavlenie{
+	0%{
+		z-index:41;
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+		z-index:41;
+		-webkit-filter: drop-shadow(3px 3px 5px #4CAF50);
+		        filter: drop-shadow(3px 3px 5px #4CAF50);
+	}
+}
+/*оформление пропадающей надписи*/
+.zadanie{
+	position:absolute;
+	top:80px;
+	left:90px;
+	font-family:'Olietta_script_BoldItalic';
+	font-weight: bold;
+	font-size: 40px;
+	text-shadow: 0px 0px 10px #ffd700;
+	color: #FFEB3B;
+	z-index:39;
+	cursor: default;
+	-webkit-animation: zadanie1 4s 3s forwards;
+	        animation: zadanie1 4s 3s forwards;
+}
+
+@-webkit-keyframes zadanie1{
+	0%{
+		opacity:1;
+	}
+	50%{
+		-webkit-filter:drop-shadow(1px 1px 20px white);
+		        filter:drop-shadow(1px 1px 20px white);
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@keyframes zadanie1{
+	0%{
+		opacity:1;
+	}
+	50%{
+		-webkit-filter:drop-shadow(1px 1px 20px white);
+		        filter:drop-shadow(1px 1px 20px white);
+	}
+	100%{
+		opacity:0;
+	}
+}
+#fire{
+	filter: brightness(0.85);
+	
+}
