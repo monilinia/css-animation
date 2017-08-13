@@ -9,43 +9,43 @@
 <meta charset="utf-8">
 <title>Мир кожаных идей</title>
 <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
-	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript">
-	
-		jQuery(document).ready(function(){
-			// Declare parallax on layers
-			jQuery('.parallax-layer').parallax({
-				mouseport: jQuery("#port")
-			});
+	jQuery(document).ready(function(){
+		// Declare parallax on layers
+		jQuery('.parallax-layer').parallax({
+			mouseport: jQuery("#port")
 		});
-	</script>
-	<script src="js_parallax/jquery.parallax.js"></script>
-	<script src="js/growth.js"></script>
+	});
+</script>
+<script src="js_parallax/jquery.parallax.js"></script>
+<script src="js/growth.js"></script>
 	
 </head>
 <body>
-
+<!--Один из popup промо-сайта, посвященному выставке-ярмарке изделий ручной работы "Мир кожаных идей". Текст-задание исчезает при загрузке страницы. "Папараць-кветка" меняет свое положение, при этом происходит изменение ее яркости. При клике на нее, запускается анимация по изменению размера, появляется "сияние" и текст-приглашение на выставку. -->
 <div class="popup" id="popup1">
 	<div class="popup-content">
-	<h3 class="zadanie">Отыщите свою счастливую "Папараць-кветку" </h3>
+	<h3 class="zadanie">Отыщите свою счастливую "Папараць-кветку" </h3><!--пропадающая надпись-->
 		<div id="port">
-			<!-- Seven image layers, each layer slightly bigger than the one behind, making 'closer' layers move faster. -->
+			<!--появляющиеся круги-->
 			<div id="circle1"></div>
 			<div id="circle2"></div>
 			<div id="circle3"></div>
 			<div id="circle4"></div>
 			<div id="circle5"></div>
 			<div id="circle6"></div>
-			<h2>Окунитесь в сказку, посетив выставку-ярмарку изделий ручной работы "Мир кожаных идей"!</h2>
-			<img class="parallax-layer" src="image/parallax6.png" alt="" style="width:890px; height:640px; pointer-events: none;"/>
+			<h2>Окунитесь в сказку, посетив выставку-ярмарку изделий ручной работы "Мир кожаных идей"!</h2><!--появляющаяся надпись-->
+			<!-- 6 слоев с параллакс-эффектом, размеры которых больше контейнера, каждый последующий, расположенный ближе, имеет большие размеры -->
+			<img class="parallax-layer" src="image/parallax6.png" alt="" style="width:900px; height:640px; pointer-events: none;"/>
 			<img class="parallax-layer" src="image/parallax5.png" alt="" style="width:920px; height:640px; pointer-events: none;"/>
 			<img class="parallax-layer" id="fire" src="image/images/fire.gif" alt="" style="width:940px; height:660px; pointer-events: none;"/>
-			<img id="kvetka" class="pulse" src="image/parallax7.png" alt="flower" onclick="growth();"/>
+			<img id="kvetka" class="pulse" src="image/parallax7.png" alt="flower" onclick="growth();"/><!--папараць-кветка-->
 			<img class="parallax-layer" src="image/parallax3.png" alt="" style="width:960px; height:680px; pointer-events: none;"/>
-			<img class="parallax-layer" src="image/parallax2.png" alt="" style="width:980px; height:690px; pointer-events: none;"/>
-			<img class="parallax-layer" src="image/parallax1.png" alt="" style="width:1000px; height:700px;	pointer-events: none;"/>
+			<img class="parallax-layer" src="image/parallax2.png" alt="" style="width:980px; height:700px; pointer-events: none;"/>
+			<img class="parallax-layer" src="image/parallax1.png" alt="" style="width:1020px; height:720px;	pointer-events: none;"/>
 		</div>
-	
+	<div class="preload"></div>
 	</div>
 		
 </div>

@@ -3,14 +3,6 @@
 font-family: 'Olietta_script_BoldItalic';
 src: url('fonts/Olietta_script_BoldItalic.ttf');
 }
-@font-face {
-font-family: 'Olietta_script_Lyrica_BoldItalic';
-src: url('fonts/Olietta_script_Lyrica_BoldItalic.ttf');
-}
-@font-face {
-font-family: 'Rubius';
-src: url('fonts/Rubius.ttf');
-}
 
 /* оформление popup*/
 .popup {
@@ -24,7 +16,7 @@ src: url('fonts/Rubius.ttf');
 	background: -webkit-radial-gradient(circle,#CD853F,#FF8C00,#300, #000 );
 }
 .popup  .popup-content {
-	margin: 20px auto;
+	margin: 5vh auto;
 	width: 800px;
 	text-align: center;
     position: relative;
@@ -33,8 +25,7 @@ src: url('fonts/Rubius.ttf');
 
 /* свойства для блока с параллакс */
 #port {
-	background: rgb(47, 49, 52);
-	margin: 1.5em 0px;
+	background:#FF8C00;
 	overflow: hidden;
 	position: relative;
 	height: 600px;
@@ -80,25 +71,26 @@ src: url('fonts/Rubius.ttf');
 	        animation-fill-mode: forwards;	
 }
 @-webkit-keyframes growth{
-	0%{z-index:40;
+	0%{z-index:4;
 	}
 	100%{
 		-webkit-transform: scale(10);
 		        transform: scale(10);
 		opacity:1;
-		z-index:40;
+		z-index:4;
 	}
 }
 @keyframes growth{
-	0%{z-index:40;
+	0%{z-index:4;
 	}
 	100%{
 		-webkit-transform: scale(10);
 		        transform: scale(10);
 		opacity:1;
-		z-index:40;
+		z-index:4;
 	}
 }
+/*появляющиеся круги*/
 #circle1, #circle2, #circle3, #circle4, #circle5, #circle6{
 	z-index:41;	
 	width:8px;
@@ -149,7 +141,7 @@ src: url('fonts/Rubius.ttf');
 }
 @-webkit-keyframes siyanie{
 	0%{
-		z-index:39;
+		z-index:2;
 		opacity:0.9;
 		-webkit-transform: rotate(0deg) scale(1);
 		        transform: rotate(0deg) scale(1);
@@ -158,12 +150,12 @@ src: url('fonts/Rubius.ttf');
 		-webkit-transform: rotate(120deg) scale(50);
 		        transform: rotate(120deg) scale(50);
 		opacity:0;
-		z-index:39;
+		z-index:2;
 	}
 }
 @keyframes siyanie{
 	0%{
-		z-index:39;
+		z-index:2;
 		opacity:0.9;
 		-webkit-transform: rotate(0deg) scale(1);
 		        transform: rotate(0deg) scale(1);
@@ -172,7 +164,7 @@ src: url('fonts/Rubius.ttf');
 		-webkit-transform: rotate(120deg) scale(50);
 		        transform: rotate(120deg) scale(50);
 		opacity:0;
-		z-index:39;
+		z-index:2;
 	}
 }
 /*оформление появляющейся надписи*/
@@ -198,24 +190,24 @@ h2{
 }
 @-webkit-keyframes poyavlenie{
 	0%{
-		z-index:41;
+		z-index:4;
 		opacity:0;
 	}
 	100%{
 		opacity:1;
-		z-index:41;
+		z-index:4;
 		-webkit-filter: drop-shadow(3px 3px 5px #4CAF50);
 		        filter: drop-shadow(3px 3px 5px #4CAF50);
 	}
 }
 @keyframes poyavlenie{
 	0%{
-		z-index:41;
+		z-index:4;
 		opacity:0;
 	}
 	100%{
 		opacity:1;
-		z-index:41;
+		z-index:4;
 		-webkit-filter: drop-shadow(3px 3px 5px #4CAF50);
 		        filter: drop-shadow(3px 3px 5px #4CAF50);
 	}
@@ -224,13 +216,13 @@ h2{
 .zadanie{
 	position:absolute;
 	top:80px;
-	left:90px;
+	left:80px;
 	font-family:'Olietta_script_BoldItalic';
 	font-weight: bold;
 	font-size: 40px;
 	text-shadow: 0px 0px 10px #ffd700;
 	color: #FFEB3B;
-	z-index:39;
+	z-index:2;
 	cursor: default;
 	-webkit-animation: zadanie1 4s 3s forwards;
 	        animation: zadanie1 4s 3s forwards;
@@ -262,6 +254,33 @@ h2{
 	}
 }
 #fire{
-	filter: brightness(0.85);
-	
+	-webkit-filter: brightness(0.85);
+	        filter: brightness(0.85);
+}
+.preload{
+	background: url(../image/preloader.jpg);
+	position:absolute;
+	height: 600px;
+	width: 800px;
+	z-index: 3;
+	top: 0;
+	pointer-events: none;
+	-webkit-animation: preload 1s 1s forwards;
+	        animation: preload 1s 1s forwards;
+}
+@-webkit-keyframes preload{
+	0%{
+		opacity:1;
+	}
+	100%{-webkit-transform: scale(0.5);transform: scale(0.5);
+		opacity:0;
+	}
+}
+@keyframes preload{
+	0%{
+		opacity:1;
+	}
+	100%{-webkit-transform: scale(0.5);transform: scale(0.5);
+		opacity:0;
+	}
 }
